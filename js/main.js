@@ -1,36 +1,26 @@
-// What we do display more
-$( document ).ready(function() {
-	$('.more-wwd').hide();
-	$('.plus-btn').click(function() {
-  		$('.more-wwd').slideToggle('slow', function() {
+$(window).scroll(function(){
+	if($('.navbar').offset().top > 50){
+		$('.navbar-fixed-top').addClass('top-nav-collapse');
+		$('.logo-bottom').addClass('span-nav-collapse');
 
-    	 if (! $('.more-wwd').is(":hidden")){
-  			$('.plus-btn span').removeClass('plus');
-  			$('.plus-btn span').addClass('minus');
-  		}
-  		if ( $('.more-wwd').is(":hidden")){
-  			$('.plus-btn span').removeClass('minus');
-  			$('.plus-btn span').addClass('plus');
-  		}
-  		});
+	} else {
+		$('.navbar-fixed-top').removeClass('top-nav-collapse');
+		$('.logo-bottom').removeClass('span-nav-collapse');
+	}
+});
 
-	});
-	$('.what').click(function() {
-		$('.more-wwd').show();
-		 if (! $('.more-wwd').is(":hidden")){
-  			$('.plus-btn span').removeClass('plus rotate');
-  			$('.plus-btn span').addClass('minus');
-  		}
+$(function(){
+	$('.page-scroll a').bind('click', function(){
+		var $anchor = $(this);
+		$('html, body').stop().animate({
+			scrollTop: $($anchor.attr('href')).offset().top
+		}, 1500, 'easeInOutExpo');
+		event.preventDefault();
 	});
 });
 
-$( document ).ready(function() {
-$('.computer').hover(
-  function () {
-    $('.hover-state').fadeIn( 500 );
-  }, 
-  function () {
-    $('.hover-state').fadeOut( 500 );
-  }
-);
+
+$(document).on('click', '[data-toggle="lightbox"]', function(event) {
+event.preventDefault();
+$(this).ekkoLightbox();
 });
