@@ -1,0 +1,45 @@
+@media screen and (max-width: 1000px) and (orientation: landscape) {
+
+body {
+	width: 99vw;
+	margin: auto;	
+}
+
+
+
+
+
+
+.user-form {
+    width: 40vw;
+    margin: auto;
+   /* border: 1px solid white;
+    text-align: justify;*/
+}
+
+.city-select, .country-select {
+	/*height:9vh;*/
+	width:19.5vw;	
+	display:inline-block;
+}
+
+
+
+
+.content-container {
+	width: 55vw;
+	margin-left: 3vw;
+}
+
+.down{
+	width:12vw;
+}
+
+.up{
+	width:12vw;
+}
+
+.buttons select{
+	font-size: 100%;
+	padding-left: 5vw;
+}

@@ -1,0 +1,98 @@
+@media screen and (max-width: 770px) and (orientation: landscape){
+
+body {
+	width: 95vw;
+	margin: auto;	
+	background-image: url("meandyou-mini.jpg");
+	background-position-y: top;
+}
+  
+
+.hello{
+	font-size: 6vh;
+}
+
+.user-form {
+    width: 55vw;
+    margin: auto;
+   /* border: 1px solid white;
+    text-align: justify;*/
+}
+
+.city-select, .country-select {
+	/*height:9vh;*/
+	width:27vw;	
+	display:inline-block;
+}
+
+.user-name, .div-birth-sex, .date, .exact-time, .midle-time, .city-select, .country-select {
+	color:#442857;
+	font-size: 3.2vh;
+	font-weight: normal;
+}
+
+.image{
+	margin-top: 5vh;
+	width:49vw;
+}
+
+
+
+.content-container {
+	width: 44vw;
+	margin-left: 2vw;
+	margin-top: 1vh;
+}
+
+.header-info{
+	height: 10vh;
+	vertical-align: middle;
+}
+
+
+.info-window{
+	height: 65vh;
+}
+
+.under{
+	height: 2vh;
+}
+
+.controls{
+	height: 9vh;
+}	
+
+.down{
+	width:10vw;
+	height:8vh;
+}
+
+.up{
+	width:10vw;
+	height:8vh;
+}
+
+
+.btn{
+	top:1vh;
+}
+
+.buttons select{
+	font-size: 100%;
+	padding-left: 3vw;
+	width:15vw;
+	height:8.5vh;	
+}
+
+footer{
+	margin-top: 1.5vh;
+}
+
+span {
+font-size: 95%;
+}
+
+.user, .time {
+	font-size: 3vh;
+
+}

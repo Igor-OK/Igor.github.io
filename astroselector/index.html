@@ -1,0 +1,527 @@
+<!DOCTYPE HTML>
+<html>
+ <head>
+  <meta charset="utf-8">
+  <title>Персональный гороскоп отношений</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+  <meta name="mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <link href="style.css" rel="stylesheet">
+  <link rel="stylesheet" media="screen and (max-width: 1000px) and (orientation: landscape)" href="small.css" />
+  <link rel="stylesheet" media="screen and (min-width:320px) and (max-width:770px) and (orientation: portrait)" href="portrait.css" />
+  <link rel="stylesheet" media="screen and (max-width: 770px) and (orientation: landscape)" href="mini.css" />
+  
+ </head>
+ <body>
+
+<div class="hello">
+  <header>
+    <h1>Персональный гороскоп отношений.</h1>
+    <p>Приложение составляет подробный ИНДИВИДУАЛЬНЫЙ гороскоп на тему взаимоотношений с противоположным полом и отображает результат в виде легко усвояемой инфографики.</p> 
+  </header>
+  <main>
+    <p>Полученная информация поможет вам:</p>
+      <ul>
+        <li>Подобрать время для удачного знакомства, время когда Вы наиболее обаятельны и привлекательны для противоположного пола.</li>
+        <li>Определить время когда стоит (или не стоит) активничать (пригласить или согласиться на свидание и тд).</li>
+        <li>Вычислить время для превосходного интима.</li>
+        <li>Узнать о периодах, несущих неприятности и опасности для отношений.</li>
+        <li>Узнать, когда Вы будете несносны, или агрессивны, или капризны, или максимально эгоистичны. Зная это можно избежать многих ошибок.</li>
+        <li>Выделить время, благоприетное (или НЕ благоприятное) для объяснения, помолвки, бракосочетания.</li>
+        <li>Обозначить время, благоприятное для зачатия.</li>
+        <li>Определить сложные длительные, кризисные для личной жизни периоды, морально подготовиться к этому и преодолеть с меньшими потерями.</li>
+        <li>Не упустить время, крайне благоприятное для позитивных изменений (или взятия качественно новых высот) в личной жизни</li>
+        <li>Быть в курсе других влияний, что поможет Вам реализовать дополнительные возможности избежав пространственных ловушек и провокаций на пути построения гармоничных отношений.</li>
+      </ul>
+     <p>После того, как Вы введёте данные рождения и отправите их, на экране появится табло, похожее на автомобильный спидометр. Стрелка Этого "спидометра" будет показывать РАВНОДЕЙСТВУЮЩУЮ всех влияний на Вашу личностно-любовно-чувственную сферу в выбранный момент времени. Ниже распологаются "датчики", которые загораются чтобы сигнализировать о тех или иных ярко-выраженных влияниях. Узнать подробнее об этих влияниях можно нажав (кликнув) на горящий датчик. Чем ярче горит дачик-тем сильнее влияние.</p>
+     <p>Внимание! Каждый запуск приложения скушает около 5 MB интернет-траффика</p>
+     <p>Текущий расклад не всегда бывает однозначным, зачастую это смесь разных влияний. В таких случаях, когда горят датчики и хорошие и плохие, следует это трактовать следующим образом: возможности можно будет реализовать в случае грамотного избежания негативных влияний, ловушек и провокаций. Так же они могут просто уравновесить друг друга. Cтрелка может внести ясность, тк в показаниях стрелки учитывается больший спектр влияний, нежели расшифрован в датчиках.</p>
+     <p>Со временем, отслеживая соотношение показаний "прибора" и событий/эмоций в личной жизни, Вы немного "откалибруете" его под себя и станете более умело им пользоваться.</p>
+     <p>Отнеситесь, пожалуйста, ответственно к внесению Ваших данных рождения.</p>
+     <p>Данное приложение cоздано в помощь тем, кто ищет вторую половинку по результатам расчета на astroselector.com, но обязательно будет полезно ВСЕМ. </p>
+     <p>Любите и уважайте друг друга!</p><br><br>
+  
+
+      <form name="USER" class="user-form">
+            <span class="birth-name">Ваше имя: </span>
+            <input type="text" name="user-name" class="user-name"><br>
+
+            <span class="birth-sex">Ваш пол: </span> 
+            <div class="div-birth-sex">
+            <label class="birth-male"><input type="radio" id="sex-male" name="sex" value="М"> М</label>
+            <label class="birth-female"><input type="radio" id="sex-female" name="sex" value="Ж"> Ж</label></div><br>
+
+            <span class="birth-date">Дата рождения: </span>
+            <input type="text" name="date" class="date" placeholder="дд.мм.гггг" size=13><br>
+
+            <span class="birth-time">Время рождения:</span><br>   
+            <label id="time-label-true"><input type="radio" id="time-true" name="time" value=true > Точное время - </label>
+            <input type="text" name="exact-time" class="exact-time" disabled placeholder="чч.мм" size=11><br>
+            <label id="time-label-false"><input type="radio" id="time-false" name="time" value=false > Не знаю, около </label>
+            <input type="text" name="midle-time" class="midle-time" disabled placeholder="чч.мм" size=11><br>
+
+            <span class="birth-place">Место рождения:</span><br>
+             <select name="country" class="country-select">
+                <option selected disabled>Страна</option>
+                <option value="Беларусь">Беларусь</option>
+         <!--   <option value="2">Россия</option>
+                <option value="3">Украина</option>
+                <option value="4">Казахстан</option>-->
+             </select>
+
+              <select name="city" class="city-select" disabled>
+                <option selected disabled>Город</option>
+              </select><br>
+           <div class="sent">Показать расклад</div>
+      </form>
+    
+    </main>
+
+</div>
+
+<div class = "df-background"></div>
+
+
+
+
+
+<div class = "Progress" style='position:absolute; left:25vw; top: 30vh; border: solid white 1vh; width: 50vw;  z-index: 10'>
+  <div class='ProgressPerc' style='background-color: white; height: 20vh; width: 0%'></div>
+</div>
+
+<div class="image">
+  <div class = "square">
+    <svg  id='svg' class='svg' width=220 height=220 xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' >
+      <circle class='RED' cx=1 cy=1 r=1 fill=rgb(100,100,100) />
+    </svg>
+  </div>
+</div>
+
+<div class="content-container">
+   <div class="info-header">
+       <h1>Гармонизатор отношений</h1>
+   </div>
+  
+   <div class="info-main">
+      <div class='info-window'>
+        <span class="info">Приложение составляет подробный ИНДИВИДУАЛЬНЫЙ гороскоп на тему взаимоотношений с противоположным полом и отображает результат в виде легко усвояемой инфографики. Создано в помощь тем, кто ищет вторую половинку по результатам расчета на astroselector.com, но обязательно будет полезно ВСЕМ. Любите и уважайте друг друга!</span> 
+      </div>
+      <div class='under'></div> 
+      <div class='controls'>
+        <form class='buttons'>
+          <div class='down'><span class='btn'>назад</span></div>
+          <select class='sel'>
+            <option value='hour'>Час</option>
+            <option selected value='day'>Сутки</option>
+            <option value='week'>Неделя</option>
+            <option value='month'>Месяц</option>
+          </select>
+          <div class='up'><span class='btn'>вперед</span></div>
+        </form>
+      </div>           
+   </div>
+
+   <footer>
+        <span class='time'>Current time </span></br>
+        <span class='user'>User info</span>
+   </footer>
+</div>
+
+
+
+
+
+<!-- SCRIPTS STARTS HERE!!!!  -->
+
+<script src='jquery.js'></script>
+<script src='view.js'></script>
+<script src='model.js'></script>
+<script type="text/javascript">
+
+
+//form submiting and validation
+
+var UserForm = document.forms['USER'];
+
+
+// HANDING_VALIDATING_BUTTON CODE
+
+
+
+var SentBtn = UserForm.querySelector('.sent');
+
+function ActiveButton (){  // function for activating of the btn
+  if (name_val == true && sex_val== true && date_val == true && time_val == true && country_val == true && city_val == true){
+    SentBtn.style.animation = 'BtnAnimation 1.77s infinite';
+    SentBtn.style.cursor = 'pointer';
+    enable_btn = true;
+  }
+  else{
+    SentBtn.style.animation = '';
+    SentBtn.style.cursor = '';
+    enable_btn = false;
+  }
+}
+
+
+var enable_btn = false;  
+SentBtn.onclick = Handle_user_data;
+
+
+
+
+
+//variables for validation
+var name_val = false;
+var sex_val = false;
+var date_val = false;
+var time_val = false;
+var country_val = false;
+var city_val = false;
+
+
+
+
+//==============================  validation of name-field
+var BName = document.querySelector('.birth-name');
+var NameField = UserForm.elements['user-name'];   
+NameField.onblur=NameValid;
+
+function NameValid(){
+  var Check_name = /\S+/;
+  if (Check_name.test(NameField.value)){
+    NameField.style.backgroundColor = '#77FF94';
+    BName.style.color = '#77FF94';
+    name_val = true;
+  }
+  else{
+    NameField.style.backgroundColor = 'white';
+    BName.style.color = 'white';
+    name_val = false;   
+  }
+  ActiveButton();
+}
+
+
+
+//==============================  validation of sex-radio (should be some text effects)
+var BSex = document.querySelector('.birth-sex');
+var label_sex_m = document.querySelector('.birth-male');
+var label_sex_fem = document.querySelector('.birth-female');
+var SexRadioMale = document.getElementById('sex-male');
+var SexRadioFemale = document.getElementById('sex-female');
+SexRadioMale.onchange = SexValid;
+SexRadioFemale.onchange = SexValid;
+var SexRadio = UserForm.elements['sex'];
+
+function SexValid(){
+
+if (SexRadio.value == 'М'){
+  label_sex_m.style.opacity = 1;
+  label_sex_fem.style.opacity = 0.17;  
+  label_sex_m.style.color = '#77FF94';
+  label_sex_fem.style.color = 'white';
+  BSex.style.color = '#77FF94';
+  sex_val = true;
+}
+if (SexRadio.value == 'Ж'){
+  label_sex_m.style.opacity = 0.17;
+  label_sex_fem.style.opacity = 1; 
+  label_sex_fem.style.color = '#77FF94';
+  label_sex_m.style.color = 'white';
+  BSex.style.color = '#77FF94';
+  sex_val = true;
+}
+ActiveButton();
+}
+
+
+
+//==============================================  validation of date-field
+var BDate = document.querySelector('.birth-date');
+var DateField = UserForm.elements['date'];  
+DateField.onblur = DateValid;
+
+function DateValid(){
+  var Check_date =  /^[0123]{1}[0-9]{1}\.[01]{1}[0-9]{1}\.[12]{1}[0-9]{3}$/;
+  if (Check_date.test(DateField.value)){
+    //==========SOME EXTRA CODE should be here about special month 
+    var Check_date_arr = DateField.value.split('.');
+    if((Number(Check_date_arr[0]) <= 31) && (Number(Check_date_arr[1]) <= 12) && (Number(Check_date_arr[2]) > 1961) && ( Number(Check_date_arr[2]) < 2002)){
+      DateField.style.backgroundColor = '#77FF94';
+      BDate.style.color = '#77FF94';
+      date_val = true;
+    }
+    else{
+      DateField.style.backgroundColor = 'white';
+      BDate.style.color = 'white';
+      date_val = false;
+    }
+  }
+  else{
+     DateField.style.backgroundColor = 'white';
+     BDate.style.color = 'white';
+     date_val = false;
+  }
+  ActiveButton();
+}
+
+
+
+
+// ==========================  validation of time-field
+var BTime = document.querySelector('.birth-time');
+var ExactTimeField = UserForm.elements['exact-time'];   
+ExactTimeField.onblur = ETimeValid;
+var MidleTimeField = UserForm.elements['midle-time'];   
+MidleTimeField.onblur = MTimeValid;
+
+var TimeLabelTrue = document.getElementById('time-label-true');
+var TimeLabelFalse = document.getElementById('time-label-false');
+var TimeRadioTrue = document.getElementById('time-true');
+var TimeRadioFalse = document.getElementById('time-false');
+TimeRadioTrue.onchange = TimeAnswer;
+TimeRadioFalse.onchange = TimeAnswer;
+
+function TimeAnswer(){
+  TimeLabelTrue.style.color = 'white';
+  TimeLabelFalse.style.color = 'white';
+  BTime.style.color = 'white';
+  time_val = false;
+  var TimeRadio = UserForm.elements['time'];
+    if (TimeRadio.value == 'true'){
+      ModelH.exact_time = 'true';
+      ExactTimeField.disabled = false;
+      MidleTimeField.disabled = true;
+      MidleTimeField.value = "";
+      TimeLabelTrue.style.opacity = 1;
+      TimeLabelFalse.style.opacity = 0.25;
+      ExactTimeField.style.backgroundColor = 'rgba(255,255,255,1)';
+      MidleTimeField.style.backgroundColor = 'rgba(255,255,255,0.1)';
+    }
+    if (TimeRadio.value == 'false'){
+      ModelH.exact_time = 'false';
+      ExactTimeField.disabled = true;
+      MidleTimeField.disabled = false; 
+      ExactTimeField.value = ""; 
+      TimeLabelTrue.style.opacity = 0.25;
+      TimeLabelFalse.style.opacity = 1;
+      ExactTimeField.style.backgroundColor = 'rgba(255,255,255,0.1)';
+      MidleTimeField.style.backgroundColor = 'rgba(255,255,255,1)';
+    } 
+    ActiveButton(); 
+}
+
+function ETimeValid(){
+  var Check_time = /^[012]{1}[0-9]{1}\.[0-5]{1}[0-9]{1}$/;
+    if (Check_time.test(ExactTimeField.value)){
+       var Check_time_arr = ExactTimeField.value.split('.');
+       if((Number(Check_time_arr[0]) <=23) && (Number(Check_time_arr[1]) <=59)){
+        ExactTimeField.style.backgroundColor = '#77FF94';
+        TimeLabelTrue.style.color = '#77FF94';
+        BTime.style.color = '#77FF94';
+        time_val = true;
+       }
+       else{
+        ExactTimeField.style.backgroundColor = 'white';
+        time_val = false;       
+       }
+    }
+     else{
+      ExactTimeField.style.backgroundColor = 'white';  
+      time_val = false;      
+     }
+     ActiveButton();
+}
+
+function MTimeValid(){
+  var Check_time = /^[012]{1}[0-9]{1}\.[0-5]{1}[0-9]{1}$/;
+    if (Check_time.test(MidleTimeField.value)){
+       var Check_time_arr = MidleTimeField.value.split('.');
+       if((Number(Check_time_arr[0]) <=23) && (Number(Check_time_arr[1]) <=59)){
+        MidleTimeField.style.backgroundColor = '#77FF94';
+        TimeLabelFalse.style.color = '#77FF94';
+        BTime.style.color = '#77FF94';
+        time_val = true;
+       }
+       else{
+        MidleTimeField.style.backgroundColor = 'white';  
+        time_val = false;      
+       }
+    }
+     else{
+      MidleTimeField.style.backgroundColor = 'white'; 
+      time_val = false;       
+     }
+     ActiveButton();
+}
+
+
+
+
+//===============================  validation of country field + defining city-select
+var BPlace = document.querySelector('.birth-place');
+var CountrySelect = UserForm.elements['country'];
+CountrySelect.onchange = CountryValid;
+
+var CitySelect = UserForm.elements['city'];
+CitySelect.onchange = CityValid;
+
+var bel_cities = [{city:"Минск", value:"Минск"}, {city:"Брест", value:"Брест"}, {city:"Витебск", value:"Витебск"}, {city:"Гомель", value:"Гомель"}, {city:"Гродно", value:"Гродно"}, {city:"Могилёв", value:"Могилёв"}];
+
+function CountryValid(){
+  if (CountrySelect.value != ""){
+    CountrySelect.style.backgroundColor = '#77FF94';
+    country_val = true;
+  }
+  if (CountrySelect.value == "Беларусь"){
+    for (var j=0; j<bel_cities.length; j++)   
+      {
+        var sel_option=document.createElement('option');
+        var ot = bel_cities[j].city;
+        var option_text = document.createTextNode(ot);  
+        sel_option.appendChild(option_text);
+        sel_option.value=bel_cities[j].value;    
+        CitySelect.appendChild(sel_option); 
+        CitySelect.disabled = false;
+      }
+  }
+  ActiveButton();
+}
+
+function CityValid(){
+  if (CitySelect.value != ""){
+    CitySelect.style.backgroundColor = '#77FF94';
+    BPlace.style.color = '#77FF94';
+    city_val = true;
+  }
+  ActiveButton();
+}
+
+
+
+//----------Load data from local storage
+var StoredUser=window.localStorage.getItem('is_saved');
+if ( StoredUser ){
+  NameField.value = window.localStorage.getItem('native_name');
+  NameValid();
+  if (window.localStorage.getItem('native_sex') == 'М')
+    SexRadioMale.checked = true;
+  if (window.localStorage.getItem('native_sex') == 'Ж')
+    SexRadioFemale.checked = true;
+  SexValid();
+  DateField.value = window.localStorage.getItem('native_date');
+  DateValid();
+  if (window.localStorage.getItem('exact_time') == 'true'){
+    TimeRadioTrue.checked = true;
+    ExactTimeField.value = window.localStorage.getItem('native_time');
+    TimeLabelFalse.style.opacity = 0.25;
+    MidleTimeField.style.backgroundColor = 'rgba(255,255,255,0.1)';
+    TimeAnswer()
+    ETimeValid();
+  }
+  if (window.localStorage.getItem('exact_time') == 'false'){
+    TimeRadioFalse.checked = true;
+    MidleTimeField.value = window.localStorage.getItem('native_time'); 
+    TimeLabelTrue.style.opacity = 0.25;
+    ExactTimeField.style.backgroundColor = 'rgba(255,255,255,0.1)';
+    TimeAnswer()
+    MTimeValid();  
+  }
+  CountrySelect.value = window.localStorage.getItem('native_country');
+  CountryValid();
+  CitySelect.value = window.localStorage.getItem('native_city');
+  CityValid();
+  ;
+}
+ActiveButton();
+
+
+
+
+// handling part
+
+function Handle_user_data(){
+
+  if (enable_btn == true){
+    ModelH.native_name = NameField.value;
+    ModelH.native_sex = SexRadio.value;
+    ModelH.native_date = DateField.value;
+    var TimeRadio = UserForm.elements['time'];
+      if (TimeRadio.value == 'true'){
+        ModelH.native_time = ExactTimeField.value;
+        ModelH.exact_time = 'true';
+      }
+      if (TimeRadio.value == 'false'){
+        ModelH.native_time = MidleTimeField.value;
+        ModelH.exact_time = 'false';
+      }  
+    // take care about country
+    ModelH.native_country = CountrySelect.value;
+    ModelH.native_city = CitySelect.value; 
+    if (ModelH.native_country == 'Беларусь')
+      ModelH.Belarus_gmt(); // calculating apropriate GMT
+
+//dissapearing animation
+    var div_hello = document.querySelector('.hello');
+    var div_back = document.querySelector('.df-background');
+    div_hello.style.display='none';
+    div_back.style.display='none';  // some animation should be here
+
+
+    ModelH.TestLoadData() // LOADING
+  }
+}
+
+
+
+// loading
+
+
+window.addEventListener('resize',function() { ViewH.ViewResize() },false);  // sizing
+
+
+// =========== listeners for buttons up&down =========
+var DownBtn = document.querySelector('.down');
+var UpBtn = document.querySelector('.up');
+var Sel = document.querySelector('.sel');
+
+
+DownBtn.addEventListener('mousedown',function() { ModelH.Go_down() },false); 
+DownBtn.addEventListener('touchstart',function() { ModelH.Go_down() },false); 
+UpBtn.addEventListener('mousedown',function() { ModelH.Go_up() },false); 
+UpBtn.addEventListener('touchstart',function() { ModelH.Go_up() },false); 
+Sel.addEventListener('change',function() { ModelH.Selector_check() },false);
+
+
+
+//SWIPE LEFT-RIGHT
+var startPoint={};
+var nowPoint;
+var ldelay;
+document.addEventListener('touchstart', function(event) {
+event.preventDefault();
+event.stopPropagation();
+startPoint.x=event.changedTouches[0].pageX;
+startPoint.y=event.changedTouches[0].pageY;
+ldelay=new Date(); 
+}, false);
+
+document.addEventListener('touchend', function(event) {
+var pdelay=new Date(); 
+nowPoint=event.changedTouches[0];
+var xAbs = Math.abs(startPoint.x - nowPoint.pageX);
+var yAbs = Math.abs(startPoint.y - nowPoint.pageY);
+if ((xAbs > 20 || yAbs > 20) && (pdelay.getTime()-ldelay.getTime())<200) {
+if (xAbs > yAbs) {
+if (nowPoint.pageX < startPoint.x){ModelH.Go_down()}
+else{ModelH.Go_up()}
+}
+}
+}, false);
+
+
+</script>
+
+
+ </body>
