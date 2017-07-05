@@ -1,0 +1,264 @@
+/* -----------------------------------------
+   Ed.css add to main.css
+----------------------------------------- */
+
+/* Not sure why but the line-height was set to 1? Updated current website line-height to normal */
+body {line-height: normal;}
+p {line-height: 1.45em;}
+/* Added more margin below h3's */
+h3 {margin-bottom: 2.5em;}
+h4 {font-size: 21px; margin-top: 0.8em; margin-bottom: 0.6em;}
+h1 {line-height: 1.5em; font-size: 50px;}
+.who-are-we h4 {margin: 10px 0px 0px 0px;}
+.who-are-we h5 {margin: 3px 0px 0px 0px; font-weight: 600;}
+
+/* -----------------------------------------
+   HEADER/NAVIGATION
+----------------------------------------- */
+
+/* Remove margin-top on h1 */
+h1 {margin-top:0px;}
+
+/* Navigation hover transition */
+.navigation ul li a {
+	font-size: 15px;
+	/* Removed/reset line-height to center text vertically in navigation */
+	line-height: normal;
+	-webkit-transition: color .3s ease-in;
+	-moz-transition: color .3s ease-in;
+	-o-transition: color .3s ease-in;
+	-ms-transition: color .3s ease-in;
+	transition: color .3s ease-in;
+}
+
+/* -----------------------------------------
+   WHAT WE DO
+----------------------------------------- */
+
+/* Added a little hover effect to what we do icons - Remove if silly :) */
+.what-we-do div .icon {
+	-webkit-transition: box-shadow .3s ease-in;
+	-moz-transition: box-shadow .3s ease-in;
+	-o-transition: box-shadow .3s ease-in;
+	-ms-transition: box-shadow .3s ease-in;
+	transition: box-shadow .3s ease-in;
+}
+.what-we-do div .icon:hover {
+	box-shadow: 0 0 0 6px #E13D41;
+}
+/* Adding a margin top to the second level what we do section */
+.what-we-do .more-wwd {
+	margin-top: 20px;
+}
+
+/* -----------------------------------------
+   WHO WE ARE
+----------------------------------------- */
+
+/* Twitter and email styling */
+.who-are-we ul {list-style: none;}
+.who-are-we ul li {display:inline-block;}
+
+/* Positioning icons */
+.who-are-we ul {text-align: center;}
+/* Adding transition effect 
+.who-are-we ul a {
+	-webkit-transition: all .3s ease-in;
+	-moz-transition: all .3s ease-in;
+	-o-transition: all .3s ease-in;
+	-ms-transition: all .3s ease-in;
+	transition: all .3s ease-in;
+} */
+
+/* -----------------------------------------
+   CONTACT US 
+----------------------------------------- */
+
+/* Contact us twitter button */
+.dash-icons.twitter:hover {background-color: #00abf0;}
+.dash-icons.twitter:active {background-color: #0092D7;}
+
+/* Contact us email button */
+.dash-icons.email:hover {background-color: #26ae90;}
+.dash-icons.email:active {background-color: #0D9577;}
+
+/* Contact us youtube button */
+.dash-icons.youtube:hover {background-color: #FA565A;}
+.dash-icons.youtube:active {background-color: #C43037;}
+
+
+/* Editing contact form inputs */
+.contact-form input, .contact-form textarea {padding: 17px; font-size: 18px;}
+
+/* Updating submit button padding */
+.contact-form .send-message {padding: 0.8em 4em 0.8em 4em; font-size: 19px;}
+
+/* Styling placeholder text */
+/*
+::-webkit-input-placeholder {color: #464e5d;}
+:-moz-placeholder { color: #464e5d; }
+::-moz-placeholder { color: #464e5d; }
+:-ms-input-placeholder { color: #464e5d; }
+*/
+::-webkit-input-placeholder {color: #464e5d;}
+:-moz-placeholder { color: #464e5d; }
+::-moz-placeholder { color: #464e5d; }
+:-ms-input-placeholder { color: #464e5d; }
+
+/* Adding a transition to the inputs on focus */
+.contact-form input:focus, .contact-form textarea {
+	-webkit-transition: background-color .5s ease;
+	-moz-transition: background-color .5s ease;
+	-o-transition: background-color .5s ease;
+	-ms-transition: background-color .5s ease;
+	transition: background-color .5s ease;
+}
+.get-in-touch p {margin-top: 0;}
+
+
+
+/* -----------------------------------------
+  FOOTER
+----------------------------------------- */
+
+.footer p {padding: 1.4em; font-family: 'lato', sans-serif; font-weight: 900; font-size: 15px;}
+
+
+
+
+/* -----------------------------------------
+  IPAD LANDSCAPE + PORTRAIT
+----------------------------------------- */
+@media only screen and (min-device-width : 768px) and (max-device-width : 1024px) {
+	.navigation ul li a{
+		font-size: 14px!important;
+	}
+	.orbit-container .orbit-prev, .orbit-container .orbit-next{
+		display: none!important;
+	}
+	.slide-back{
+		margin-left: 10%!important;
+	}
+	.orbit-bullets {
+    	display: table!important;
+    	text-align: center!important;
+	}
+	.hover-state{
+		display: none!important;
+	}
+
+}
+
+/* -----------------------------------------
+  TABLET LANDSCAPE + PORTRAIT
+----------------------------------------- */
+@media (min-width: 768px) and (max-width: 1024px) {
+	.orbit-container .orbit-prev, .orbit-container .orbit-next{
+		display: none!important;
+	}
+	.slide-back{
+		margin-left: 10%!important;
+	}
+	.hover-state{
+		display: none!important;
+	}
+}
+/* -----------------------------------------
+  IPAD LANDSCAPE ONLY
+----------------------------------------- */
+@media only screen and (min-device-width : 768px) and (max-device-width : 1024px) and (orientation : landscape) { 
+	.slide-back{
+		margin-left: 25%!important;
+	}
+	.hover-state{
+		display: none!important;
+	}
+}
+
+@media only screen and (min-device-width : 320px) and (max-device-width : 568px){
+	.hover-state{
+		display: none!important;
+	}
+}
+
+
+/* -----------------------------------------
+  IPHONE
+----------------------------------------- */
+@media  (min-width : 320px) and (max-width : 768px){
+	.orbit-container .orbit-prev, .orbit-container .orbit-next{
+		display: none!important;
+	}
+	.hover-state{
+		display: none!important;
+	}
+	.header {
+		height: 420px;
+	}
+	.header-top {
+		height: 420px;
+	}
+	.banner-text {
+		padding-top:130px;
+	}
+	.header-top {
+		background-image: none;
+	}
+	h1 {
+		font-size: 38px;
+	}
+	h3 {
+		margin-bottom:1.2em;
+		margin-top:0.5em;
+	}
+	h4 {
+	}
+	.what-we-do, .who-are-we, .get-in-touch, .our-work {
+		padding-top: 60px;
+		padding-bottom: 60px;
+	}
+	.columns, .column {
+		padding-left:1.2em;
+		padding-right:1.2em;
+	}
+	.top-bar .container .columns {
+		padding-left:0.5em;
+		padding-right:0.5em;
+	}
+	.web-design, .web-development, .social-media, .e-commerce, .mobile-development, .seo-sem, .email-marketing, .hosting-services {
+		margin-top: 1em;
+	}
+}
+
+
+
+@media (min-width: 768px) and (max-width: 1024px) {
+	.navigation ul li a{
+		font-size: 13px!important;
+	}
+	.navigation ul{
+		margin-top: 26px!important;
+	}
+
+
+}
+@media only screen and (min-device-width : 768px) and (max-device-width : 1024px) and (orientation : portrait) { 
+	.navigation ul li a{
+		font-size: 12px!important;
+	}
+
+	.navigation ul li{
+		padding-left:0px;
+		margin-top: 0px;
+	}
+}
+
+
+
+
+
+
+
+
+
+

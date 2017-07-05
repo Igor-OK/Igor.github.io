@@ -1,0 +1,85 @@
+
+/*--------------------------------------------- Interactive Image ---------------------------------------------*/
+
+#interactive { 
+    position: relative;
+    height:   338px;
+    width:    720px;
+    padding: 0px;
+    margin: 0px;
+}
+
+#interactive img {  
+    position: absolute;
+    top: 0px;
+    left: 0px;
+}
+
+#range-wrapper .content{ 
+    width: 720px;
+}
+
+#range-wrapper .swatch { 
+    padding:       8px; 
+    float:         left; 
+    margin-right:  0px;
+    margin-bottom: 8px;
+    border-right:  1px solid #b3b3b3; 
+    background:    #e9e9ea url("../img/controls-bg.png") repeat-x;
+    height:        57px;
+}
+
+#range-wrapper .swatch:last-child {
+	border-right: none;
+	font-weight: bold;
+	color: #E9E9EA;
+	width: 150px;
+}
+
+.swatch h2 {
+    width:        50px;
+    margin-left:  3px  !important;
+    margin-right: 3px  !important;
+    margin-top:   18px !important;
+}
+
+#range-wrapper div.content img {
+    border: 1px solid #c7c8ca;
+}
+
+.secondary-border { 
+    padding: 1px; 
+    border: 1px solid #c7c8ca; 
+    display: block; 
+    float: left; 
+    height: 23px; 
+    margin-left: 1px; 
+    margin-bottom: 1px; 
+}
+
+.secondary-border a {
+    float: left;
+}
+
+.secondary-border a img {
+    float:   left;
+    display: inline;
+}
+
+.content h2{
+	float: left;
+	font-size:12px;
+	color: #666;
+	margin: 20px 15px 20px 10px;
+	font-weight: bold;
+}
+
+.newline{ 
+    clear:   both; 
+    float:   left; 
+    display: block;
+}
+#range-wrapper .colors { float: right; } 
+
+
+
