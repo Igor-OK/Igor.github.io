@@ -1,0 +1,158 @@
+﻿/*Ãëîáàëüíûå ïàðàìåòðû*/
+body {font-family: Arial, Helvetica, Verdana, Geneva, sans serif; font-size: 11px; color: #696969; line-height: 16px; text-decoration: none; margin: 0 0 0 0; padding: 0 0 0 0; background: #fff;}
+h1{font-family: Arial, Helvetica, Verdana, Geneva, sans serif; font-size: 24px; color: #696969; line-height: 28px; text-decoration: none; font-weight:normal;}
+h2{font-family: Arial, Helvetica, Verdana, Geneva, sans serif; font-size: 16px; color: #000000; line-height: 20px; text-decoration: none;}
+p{font-family: Arial, Helvetica, Verdana, Geneva, sans serif; font-size: 11px; color: #696969; line-height: 16px; text-decoration: none; margin: 0 0 0 0; padding: 0 0 0 0;}
+a{font-family: Arial, Helvetica, Verdana, Geneva, sans serif; font-size: 11px; color: #000000; line-height: 16px; text-decoration: none;}
+a:hover{color: #696969;}
+table {border:0px;border-collapse:collapse;}
+table td{padding:0px; vertical-align: top;}
+table tr{margin: 0 0 0 0;padding: 0 0 0 0;}
+/*Ãëàâíûé äèâ*/
+#md{position: absolute;left: 50%;top: 0;margin: 0 0 0 -483px;width: 966px;}
+/*çàãîëîâîê*/
+#hd{height: 139px;}
+#hd h1{
+	font-family: Arial, Helvetica, Verdana, Geneva, sans serif;
+	font-size: 24px;
+	color: #696969;
+	line-height: 28px;
+	text-decoration: none;
+	margin: 28px 0 0 17px;
+	position: absolute;
+	left: 1px;
+}
+#logo{width: 172px;height: 57px;overflow: hidden;float: right;margin: 24px 18px 0 0; padding: 0 0 0 0;}
+/*âåðõíåå ìåíþ*/
+/* NAV - âåðõíåå ìåíþ äëÿ âñåõ áðàóçåðîâ, êðîìå IE */
+#nav, #nav ul {padding: 0;margin: 0;list-style: none}
+#nav {margin: 0 0 0 0;}
+#nav li {position:relative;float: left;display:block;padding: 0; background: #f3f3f3 url(../i/hm_a.png) repeat-y left;}
+#nav a, #nav a:link, #nav a:visited, #nav a:active{text-decoration: none;cursor: pointer;display: block;width: 100px;height: 18px;text-align: left; padding: 4px 0 0 10px;}
+#nav a:hover{background: #ffec00 url(../i/hm_b.png) repeat-y left;}
+#nav li ul {margin-top:0px;position: absolute;left: -999em;font-size : 11px;border: none;}
+#nav li:hover ul, #nav li.sfhover ul {left: 0px;z-index:65535;}
+#nav li li {border-left: 1px solid #838383;border-right: 1px solid #838383;margin-left: 0px;background:#fff;float:none;text-align: left;}
+#nav li li.last a, #nav li li.last a:link, #nav li li.last a:visited{border-bottom: 1px solid #838383;}
+#nav li li.first a,#nav li li.first a:link,#nav li li.first a:visited{border-top: 1px solid #838383;margin: 0 0 0 0;}
+#nav li li a, #nav li li a:link, #nav li li a:visited {padding: 0 0 0 3px;margin: 0 0 0 0;border: none;text-align : left; width: 275px;}
+#nav li li a:hover {background: none #ffec00;}
+#nav li {width:auto}
+#mline{border-bottom: 1px solid #838383; height: 22px;}
+
+/*ãëàâíàÿ*/
+#ibidx{width: 966px;height: 620px;}
+#ib .idx1{background: url(../i/idx-1.jpg) no-repeat top;}
+#ib .idx2{background: url(../i/idx-0.jpg) no-repeat top;}
+#ib .idx3{background: url(../i/idx-2.jpg) no-repeat top;}
+#ib .idx4{background: url(../i/idx-3.jpg) no-repeat top;}
+#ib .idx5{background: url(../i/idx-4.jpg) no-repeat top;}
+#ibidxtx{
+	margin: 440px 0 0 45px;
+	font-size: 17px;
+	color: #000;
+	width: 300px;
+	height: 100px;
+	line-height: 20px;
+}
+#ibidxtx .red{color: #e00000;font-weight: bold;}
+#ib .da{width: 20px; height: 20px; border: 1px #838383 solid; float: left; margin: 335px 0 0 10px; background: none #fff; overflow: hidden;cursor: pointer;}
+#ib .db{width: 20px; height: 20px; border: 1px #838383 solid; float: left; margin: 335px 0 0 10px; background: none #ffec00;  overflow: hidden;cursor: pointer;}
+
+/*FAQ*/
+#ibfaq{
+	background: url(../i/faq.jpg) no-repeat top;
+	width: 966px;
+	height: 360px;
+}
+#ib .faqbl{
+	margin: 0 159px 0 159px;
+	border-bottom:  1px solid #838383;
+	padding: 0 0 10px 0;
+	text-align: justify;
+}
+#ib .faqbl h2{font-family: Arial, Helvetica, Verdana, Geneva, sans serif; font-size: 11px; font-weight: 700; color: #696969; line-height: 16px; text-decoration: none;}
+
+/*accessories*/
+#ibacc{background: url(../i/acc.jpg) no-repeat top;width: 966px; height: 420px;}
+#ib .accbl{margin: 0 0 0 162px; min-height: 90px;border: 1px #fff solid;} /*Ãðàíèöû íå óäàëÿòü, èíà÷å IE îáèäèòñÿ*/
+#ib .acchd{margin: 0 0 0 288px;}
+#ib .acchd h3{font-family: Arial, Helvetica, Verdana, Geneva, sans serif; font-size: 11px; font-weight: 700; color: #000; line-height: 16px; text-decoration: none;}
+#ib .accbl img{margin: 10px 0 0 0; border: 1px #838383 solid;position: absolute;}
+#ib .accblin{margin: 0 0 0 126px; border: 1px #fff solid;} /*Ãðàíèöû íå óäàëÿòü, èíà÷å IE îáèäèòñÿ*/
+#ib .accblin h2{font-family: Arial, Helvetica, Verdana, Geneva, sans serif; font-size: 11px; font-weight: 700; color: #696969; line-height: 16px; text-decoration: none; margin: 6px 0 8px 0;}
+
+/*Ïðèìåíåíèå*/
+#ibuse{background: url(../i/use.jpg) no-repeat top;width: 966px; height: 420px;}
+#ib .usebl{} /*ñþäà â êà÷åñòâå áåêãðàóíäà âñòàâèòü òðåáóåìóþ êàðòèíêó*/
+#ib .usetx{margin: 0 0 0 288px;}
+#ib .usetx p{font-family: Arial, Helvetica, Verdana, Geneva, sans serif; font-size: 11px; color: #696969; line-height: 16px; text-decoration: none; margin: 8px 0 8px 0;}
+#ib .usetx h2{font-family: Arial, Helvetica, Verdana, Geneva, sans serif; font-size: 11px; font-weight: 700; color: #696969; line-height: 16px; text-decoration: none;}
+#ib .usetx h3{font-family: Arial, Helvetica, Verdana, Geneva, sans serif; font-size: 11px; font-weight: 700; color: #000; line-height: 16px; text-decoration: none;}
+#ib .usetx img{border: 1px #838383 solid;}
+
+/*Îïèñàíèå*/
+#ibdesc{background: url(../i/desc.jpg) no-repeat top;width: 966px; height: 490px;}
+#ib .descbl{ min-height: 150px;}
+#ib .descbl img{margin: 6px 0 0 18px;  float: left;}
+#ib .deschd,#ib .deschot{margin: 0 0 0 288px;}
+#ib .deschd h3{font-family: Arial, Helvetica, Verdana, Geneva, sans serif; font-size: 11px; font-weight: 700; color: #000; line-height: 16px; text-decoration: none;}
+#ib .deschot h3{font-family: Arial, Helvetica, Verdana, Geneva, sans serif; font-size: 11px; font-weight: 700; color: #e00000; line-height: 16px; text-decoration: none;}
+#ib .desctx{margin: 0 0 0 288px;}
+#ib .desctx p{font-family: Arial, Helvetica, Verdana, Geneva, sans serif; font-size: 11px; color: #696969; line-height: 16px; text-decoration: none; margin: 8px 0 8px 0;}
+#ib .desctx h2{font-family: Arial, Helvetica, Verdana, Geneva, sans serif; font-size: 11px; font-weight: 700; color: #696969; line-height: 16px; text-decoration: none;}
+#ib .desctx h3{font-family: Arial, Helvetica, Verdana, Geneva, sans serif; font-size: 11px; font-weight: 700; color: #000; line-height: 16px; text-decoration: none;}
+#ib .desctx td{border-bottom: 1px #838383 solid;font-family: Arial, Helvetica, Verdana, Geneva, sans serif;font-size: 11px;color: #696969;line-height: 16px;text-decoration: none;}
+#ib .desctx th{border-bottom: 1px #838383 solid;font-family: Arial, Helvetica, Verdana, Geneva, sans serif;font-size: 11px;color: #696969;line-height: 16px;text-decoration: none;text-align: left;font-weight: normal;}
+
+/*Ãäå êóïèòü*/
+#ibwb{
+	/*width: 966px;*/
+	width: 282px;
+	height: 490px;
+	float:left;
+}
+#ib .wbbl{margin: 0 0 0 0px; min-height: 90px;}
+#ib .wbhd{margin: 0 0 0 288px;}
+#ib .wbhd h3{font-family: Arial, Helvetica, Verdana, Geneva, sans serif; font-size: 11px; font-weight: 700; color: #000; line-height: 16px; text-decoration: none;}
+#ib .wbbl img{margin: 6px 0 0 0; border: 1px #838383 solid; float: left;}
+#ib .wbin{margin: 0 0 0 0px; width:678px; float:right;}
+#ib .wbin h2{font-family: Arial, Helvetica, Verdana, Geneva, sans serif; font-size: 11px; font-weight: 700; color: #696969; line-height: 16px; text-decoration: none;}
+#ib .wbin td{border-bottom: 1px #838383 solid;font-family: Arial, Helvetica, Verdana, Geneva, sans serif; font-size: 11px; color: #000; line-height: 16px; text-decoration: none;}
+#ib .wbin .noline{border-bottom: none;font-family: Arial, Helvetica, Verdana, Geneva, sans serif; font-size: 11px; color: #000; line-height: 16px; text-decoration: none;}
+#ib .wbin th{border-bottom: 1px #838383 solid;font-family: Arial, Helvetica, Verdana, Geneva, sans serif; font-size: 11px; color: #000; line-height: 16px; text-decoration: none; text-align: center;}
+
+
+/*Íèæíèé áëîê - ñåðûé*/
+#bbg{background: #f3f3f3; font-size: 16px; padding: 16px 19px 16px 19px; margin: 20px 0 0 0; clear:both;}
+#bbg p{margin: 0 0 0 0;}
+/*Íèæíèé áëîê - æåëòûé*/
+#bby{background: #ffec00;color: #000;font-size: 12px;}
+#bby p{margin: 0 21px 0 21px; line-height: 45px}
+
+/*áëîêè äëÿ ðàçäåëà Âèäåî*/
+#dvid{text-align: center; margin: 10px 0 0 0;}
+#dvidtx{
+	margin: 0 18px 0 270px;
+	text-align: left;
+}
+#dvidtx p{margin: 10px 0 10px 0;}
+
+
+
+
+
+
+/*ïàðàìåòðû èç PDF*/
+.text{font-family: Arial, Helvetica, Verdana, Geneva, sans serif; font-size: 11px; color: #696969; line-height: 16px; text-decoration: none;}
+.link{font-family: Arial, Helvetica, Verdana, Geneva, sans serif; font-size: 11px; color: #000000; line-height: 16px; text-decoration: none;}
+a.link:hover{color: #696969;}
+.headline{font-family: Arial, Helvetica, Verdana, Geneva, sans serif; font-size: 24px; color: #696969; line-height: 28px; text-decoration: none;}
+.subhead1{font-family: Arial, Helvetica, Verdana, Geneva, sans serif; font-size: 16px; color: #000000; line-height: 20px; text-decoration: none;}
+.textblack{font-family: Arial, Helvetica, Verdana, Geneva, sans serif; font-size: 11px; color: #000000; line-height: 16px; text-decoration: none;}
+.textblackbold{font-family: Arial, Helvetica, Verdana, Geneva, sans serif; font-size: 11px; font-weight: bold; color: #000000; line-height: 16px; text-decoration: none;}
+.textcaption{font-family: Arial, Helvetica, Verdana, Geneva, sans serif;font-size: 11px;font-weight: 700;color: #000000;line-height: 16px;text-decoration: none;}
+.texthighlight {font-family: Arial, Helvetica, Verdana, Geneva, sans serif; font-size: 14px; font-weight: bold; color: #000000; line-height: 18px; text-decoration: none;}
+.footer{font-family: Arial, Helvetica, Verdana, Geneva, sans serif; font-size: 10px;color: #A5A5A5; line-height: 12px; text-decoration: none;}
+.line1{border-bottom-width: 1px; border-bottom-style: solid;border-bottom-color: #CECECE;}
+.line2{border-bottom-width: 1px; border-bottom-style: solid;border-bottom-color: #E6E6E6;}
