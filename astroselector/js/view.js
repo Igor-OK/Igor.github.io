@@ -80,9 +80,6 @@ Green4_opa : 0,
 Green5_opa : 0,
 Green6_opa : 0,
 
-//==== SOUNDS ======
-ClickAudio_up : new Audio("up.mp3"),
-ClickAudio_down : new Audio("down.mp3"),
 
 
 Opacity_update : function(){ //assign values of opacity to sign-btns depending of according text
@@ -239,7 +236,8 @@ this.Axis.setAttribute("cy",50*this.BIG);
 this.SVG.appendChild(this.Axis);
 
 this.Astro = document.createElement('img');
-this.Astro.setAttribute("src", "sprite.svg#Astro");
+this.Astro.className = 'device-svg';
+this.Astro.setAttribute("src", "img/sprite.svg#Astro"); 
 this.Astro.setAttribute("height", 10*this.BIG);
 this.Astro.setAttribute("width", 10*this.BIG);
 //this.Astro.setAttribute('style', 'transition-duration: 0.75s;  transition-timing-function: linear; transform: translateZ(0) rotate(360deg) scale(10);');
@@ -249,12 +247,13 @@ this.Astro.style.top = 45*this.BIG +'px';
 this.Astro.style.opacity = 0.77;
 this.SVGsquare.appendChild(this.Astro);
 
-//this.ClickSoundInit(); // avtualizing up audio  ????????????????????????????????
+
 
 
 // ==== SIGNS
 this.Red1 = document.createElement('img');
-this.Red1.setAttribute("src", "sprites2.svg#Red1");
+this.Red1.className = 'device-svg';
+this.Red1.setAttribute("src", "img/sprites2.svg#Red1");
 this.Red1.setAttribute("height", 9*this.BIG);
 this.Red1.setAttribute("width", 9*this.BIG);
 this.Red1.style.left = 7*this.BIG +'px';
@@ -263,7 +262,8 @@ this.Red1.style.opacity = this.Red1_opa;
 this.SVGsquare.appendChild(this.Red1);
 
 this.Red2 = document.createElement('img');
-this.Red2.setAttribute("src", "sprites2.svg#Red2");
+this.Red2.className = 'device-svg';
+this.Red2.setAttribute("src", "img/sprites2.svg#Red2");
 this.Red2.setAttribute("height", 9*this.BIG);
 this.Red2.setAttribute("width", 9*this.BIG);
 this.Red2.style.left = 20*this.BIG +'px';
@@ -272,7 +272,8 @@ this.Red2.style.opacity = this.Red2_opa;
 this.SVGsquare.appendChild(this.Red2);
 
 this.Red3 = document.createElement('img');
-this.Red3.setAttribute("src", "sprites2.svg#Red3");
+this.Red3.className = 'device-svg';
+this.Red3.setAttribute("src", "img/sprites2.svg#Red3");
 this.Red3.setAttribute("height", 9*this.BIG);
 this.Red3.setAttribute("width", 9*this.BIG);
 this.Red3.style.left = 33*this.BIG +'px';
@@ -281,7 +282,8 @@ this.Red3.style.opacity = this.Red3_opa;
 this.SVGsquare.appendChild(this.Red3);
 
 this.Red4 = document.createElement('img');
-this.Red4.setAttribute("src", "sprites.svg#Red4");
+this.Red4.className = 'device-svg';
+this.Red4.setAttribute("src", "img/sprites.svg#Red4");
 this.Red4.setAttribute("height", 9*this.BIG);
 this.Red4.setAttribute("width", 15*this.BIG);
 this.Red4.style.left = 14*this.BIG +'px';
@@ -290,7 +292,8 @@ this.Red4.style.opacity = this.Red4_opa;
 this.SVGsquare.appendChild(this.Red4);
 
 this.Red5 = document.createElement('img');
-this.Red5.setAttribute("src", "sprites2.svg#Red5m");
+this.Red5.className = 'device-svg';
+this.Red5.setAttribute("src", "img/sprites2.svg#Red5m");
 this.Red5.setAttribute("height", 9*this.BIG);
 this.Red5.setAttribute("width", 9*this.BIG);
 this.Red5.style.left = 33*this.BIG +'px';
@@ -299,7 +302,8 @@ this.Red5.style.opacity = this.Red5_opa;
 this.SVGsquare.appendChild(this.Red5);
 
 this.Red6 = document.createElement('img');
-this.Red6.setAttribute("src", "sprites2.svg#Red6");
+this.Red6.className = 'device-svg';
+this.Red6.setAttribute("src", "img/sprites2.svg#Red6");
 this.Red6.setAttribute("height", 9*this.BIG);
 this.Red6.setAttribute("width", 9*this.BIG);
 this.Red6.style.left = 33*this.BIG +'px';
@@ -308,7 +312,8 @@ this.Red6.style.opacity = this.Red6_opa;
 this.SVGsquare.appendChild(this.Red6);
 
 this.White1 = document.createElement('img');
-this.White1.setAttribute("src", "sprites2.svg#White1g");
+this.White1.className = 'device-svg';
+this.White1.setAttribute("src", "img/sprites2.svg#White1g");
 this.White1.setAttribute("height", 9*this.BIG);
 this.White1.setAttribute("width", 9*this.BIG);
 this.White1.style.left = 46*this.BIG +'px';
@@ -317,7 +322,8 @@ this.White1.style.opacity = this.White1_opa;
 this.SVGsquare.appendChild(this.White1);
 
 this.White2 = document.createElement('img');
-this.White2.setAttribute("src", "sprites2.svg#White2g");
+this.White2.className = 'device-svg';
+this.White2.setAttribute("src", "img/sprites2.svg#White2g");
 this.White2.setAttribute("height", 9*this.BIG);
 this.White2.setAttribute("width", 9*this.BIG);
 this.White2.style.left = 46*this.BIG +'px';
@@ -326,7 +332,8 @@ this.White2.style.opacity = this.White2_opa;
 this.SVGsquare.appendChild(this.White2);
 
 this.White3 = document.createElement('img');
-this.White3.setAttribute("src", "sprites2.svg#White3b");
+this.White3.className = 'device-svg';
+this.White3.setAttribute("src", "img/sprites2.svg#White3b");
 this.White3.setAttribute("height", 9*this.BIG);
 this.White3.setAttribute("width", 9*this.BIG);
 this.White3.style.left = 46*this.BIG +'px';
@@ -335,7 +342,8 @@ this.White3.style.opacity = this.White3_opa;
 this.SVGsquare.appendChild(this.White3);
 
 this.Green1 = document.createElement('img');
-this.Green1.setAttribute("src", "sprites2.svg#Green1");
+this.Green1.className = 'device-svg';
+this.Green1.setAttribute("src", "img/sprites2.svg#Green1");
 this.Green1.setAttribute("height", 9*this.BIG);
 this.Green1.setAttribute("width", 9*this.BIG);
 this.Green1.style.left = 59*this.BIG +'px';
@@ -344,7 +352,8 @@ this.Green1.style.opacity = this.Green1_opa;
 this.SVGsquare.appendChild(this.Green1);
 
 this.Green2 = document.createElement('img');
-this.Green2.setAttribute("src", "sprites2.svg#Green2");
+this.Green2.className = 'device-svg';
+this.Green2.setAttribute("src", "img/sprites2.svg#Green2");
 this.Green2.setAttribute("height", 9*this.BIG);
 this.Green2.setAttribute("width", 9*this.BIG);
 this.Green2.style.left = 72*this.BIG +'px';
@@ -353,7 +362,8 @@ this.Green2.style.opacity = this.Green2_opa;
 this.SVGsquare.appendChild(this.Green2);
 
 this.Green3 = document.createElement('img');
-this.Green3.setAttribute("src", "sprites2.svg#Green3");
+this.Green3.className = 'device-svg';
+this.Green3.setAttribute("src", "img/sprites2.svg#Green3");
 this.Green3.setAttribute("height", 9*this.BIG);
 this.Green3.setAttribute("width", 9*this.BIG);
 this.Green3.style.left = 85*this.BIG +'px';
@@ -362,7 +372,8 @@ this.Green3.style.opacity = this.Green3_opa;
 this.SVGsquare.appendChild(this.Green3);
 
 this.Green4 = document.createElement('img');
-this.Green4.setAttribute("src", "sprites2.svg#Green4m");
+this.Green4.className = 'device-svg';
+this.Green4.setAttribute("src", "img/sprites2.svg#Green4m");
 this.Green4.setAttribute("height", 9*this.BIG);
 this.Green4.setAttribute("width", 9*this.BIG);
 this.Green4.style.left = 59*this.BIG +'px';
@@ -371,7 +382,8 @@ this.Green4.style.opacity = this.Green4_opa;
 this.SVGsquare.appendChild(this.Green4);
 
 this.Green5 = document.createElement('img');
-this.Green5.setAttribute("src", "sprites.svg#Green5");
+this.Green5.className = 'device-svg';
+this.Green5.setAttribute("src", "img/sprites.svg#Green5");
 this.Green5.setAttribute("height", 9*this.BIG);
 this.Green5.setAttribute("width", 14*this.BIG);
 this.Green5.style.left = 72*this.BIG +'px';
@@ -380,7 +392,8 @@ this.Green5.style.opacity = this.Green5_opa;
 this.SVGsquare.appendChild(this.Green5);
 
 this.Green6 = document.createElement('img');
-this.Green6.setAttribute("src", "sprites2.svg#Green6");
+this.Green6.className = 'device-svg';
+this.Green6.setAttribute("src", "img/sprites2.svg#Green6");
 this.Green6.setAttribute("height", 9*this.BIG);
 this.Green6.setAttribute("width", 9*this.BIG);
 this.Green6.style.left = 59*this.BIG +'px';
@@ -434,8 +447,8 @@ this.Green6.addEventListener('touchstart',function() {if (ViewH.Green6.style.opa
 
  ViewResize : function(){
 
-var _hello = document.querySelector('.hello');
-if     (_hello.style.display == 'none'){        // for working while resize hello-window
+var _to_body = document.querySelector('.to-body');
+if (_to_body.style.display == 'block'){        // for adequate working resize while hello-window
 
    this.SVGHeight = this.SVGdiv.offsetHeight;
    this.SVGWidth = this.SVGdiv.offsetWidth;
@@ -672,14 +685,14 @@ ViewUpdate : function(){  // btns starts it too
   this.Axis_speed = 1;
   this.Axis_R = 1; 
 
-this.Info.textContent = 'Приложение составляет подробный ИНДИВИДУАЛЬНЫЙ гороскоп на тему взаимоотношений с противоположным полом и отображает результат в виде легко усвояемой инфографики. Создано в помощь тем, кто ищет вторую половинку по результатам расчета на astroselector.com, но обязательно будет полезно ВСЕМ. Любите и уважайте друг друга!';
+this.Info.textContent = 'Нажмите на горящий индикатор, чтобы увидеть подробности.';
 
   if (this.Left_Right == 1){
     this.Astro.setAttribute('style', 'transition-duration: 0.73s;  transition-timing-function: linear; transform: translateZ(0) rotate(120deg) scale(10);');
     this.Astro.style.left = 45*this.BIG +'px';
     this.Astro.style.top = 45*this.BIG +'px';
     this.Astro.style.opacity = 0.77;
-    this.ClickSound_UP();
+    //this.ClickSound_UP();
     if ( navigator.vibrate ){ // есть поддержка Vibration API
       window.navigator.vibrate([100,170,80,150,80,160,70,130,80,150,80,160,80,160,80]); // vibro synchro with my melody
     }
@@ -689,7 +702,7 @@ this.Info.textContent = 'Приложение составляет подроб�
     this.Astro.style.left = 45*this.BIG +'px';
     this.Astro.style.top = 45*this.BIG +'px';
     this.Astro.style.opacity = 0.77;
-    this.ClickSound_DOWN();
+    //this.ClickSound_DOWN();
         if ( navigator.vibrate ){ // есть поддержка Vibration API
       window.navigator.vibrate([100,170,90,160,80,160,70,150,60,120,70,130,100,180,133]); // vibro synchro with my melody
     }
@@ -699,33 +712,9 @@ this.Info.textContent = 'Приложение составляет подроб�
 
 
 
-//============ for audio functions ===========
-
-ClickSoundInit : function(){
-    this.ClickAudio_up.play(); // запускаем звук
-    this.ClickAudio_up.pause(); // и сразу останавливаем
-    this.ClickAudio_down.play(); // запускаем звук
-    this.ClickAudio_down.pause(); // и сразу останавливаем
-  },
-
-ClickSound_UP : function (){
-     this.ClickAudio_up.currentTime=0; // в секундах
-     this.ClickAudio_up.play();
-    },
-
-ClickSound_DOWN : function (){
-     this.ClickAudio_down.currentTime=0; // в секундах
-     this.ClickAudio_down.play();
-    },
-
-//============================================
-
-
-
-
-
 
 // visualisation of loading AJAX of eph
+
 Progress : function(EO){   
   if ( EO.lengthComputable )
     {
@@ -734,11 +723,12 @@ Progress : function(EO){
     }
 },
 
-
 Complete : function(){
     document.querySelector('.ProgressPerc').style.display="none";
     document.querySelector('.Progress').style.display="none";
 },
+
+
 
 
 

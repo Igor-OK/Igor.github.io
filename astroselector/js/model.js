@@ -90,7 +90,7 @@ cur_sel_orb : 1.5,
 
 
 TestLoadData : function(){
-    $.ajax("natal.json",
+    $.ajax("files/natal.json",
       { 
       type:'GET', 
       dataType:'json', 
@@ -207,7 +207,6 @@ console.log(MIN);
 
 //here could be one important date, when decret time was returned in Russia 19.01.1992 - before +2 after+3 sinse this moment there was time lag 1 hour between Moskow and Minsk
  
-
 
 
     if((native_gmt[2]==1991)&&((native_gmt[1]>9) || ((native_gmt[1]==9)&&(native_gmt[0]==29)&&(native_gmt[3]>=180)) || ((native_gmt[1]==9)&&(native_gmt[0]>29)))) this.native_gmt=2;
@@ -693,8 +692,8 @@ Natal_request : function(){
 
 Model_prepare : function(){
 if (this.native_sex == 'Ж'){
-  ViewH.Red5.setAttribute("src", "sprites2.svg#Red5f");
-  ViewH.Green4.setAttribute("src", "sprites2.svg#Green4f");
+  ViewH.Red5.setAttribute("src", "img/sprites2.svg#Red5f");
+  ViewH.Green4.setAttribute("src", "img/sprites2.svg#Green4f");
 }
 },
 
