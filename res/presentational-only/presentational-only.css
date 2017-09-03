@@ -39,11 +39,24 @@ strong {
 }
 
 blockquote {
-
+  display: block;
+  max-width: 480px;
+  margin: 15px auto;
+  padding: 15px;
+  background-color: rgba(0, 0, 0, 0.3);  
+  color: #e1e1e1;
+  font-family: "Kotta One", serif;
+  font-size: 22px;
+  line-height: 28px;
 }
 
 blockquote cite {
-
+  display: block;
+  font: 18px/23px "Cantarell", sans-serif;
+  font-size: 16px;
+  margin-top: 16px;
+  color: #cccccc;
+  text-transform: uppercase;
 }
 
 /* Layout */
