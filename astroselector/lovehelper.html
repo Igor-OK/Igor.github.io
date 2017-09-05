@@ -10,6 +10,7 @@
     <link href='http://fonts.googleapis.com/css?family=Roboto:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
     <link href='http://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>
     <link rel="stylesheet" href="css/font-awesome.css">
+    <link rel="stylesheet" href="css/animate.css">
     <!-- Bootstrap core CSS -->
     <link href="css/bootstrap.css" rel="stylesheet">
     <!-- Custom styles for this template -->
@@ -18,7 +19,7 @@
 
   </head>
 
-  <body class="no-fix">
+  <body>
 
     <nav class="navbar navbar-custom">
       <div class="container">
@@ -32,7 +33,7 @@
         <!--
           <img src="img/sprite.svg#Astro" class="logo-img">
           -->
-          <a href="index.html" class="navbar-brand">ASTROSELECTOR.COM</a>
+          <a href="http://astroselector.com" class="navbar-brand">ASTROSELECTOR.COM</a>
           
         </div>
         <div id="navbar" class="collapse navbar-collapse navbar-right">
@@ -47,7 +48,7 @@
 
 
 <section class="astro-logo">
-  <div class="container">
+  <div class="container animated fadeIn">
     <div class="row">
       <div class="big-logo col-md-4 col-md-offset-4 col-sm-6 col-sm-offset-3 col-xs-6 col-xs-offset-3">
         <img src="img/sprite.svg#Astro" class="logo-img">
@@ -56,7 +57,7 @@
   </div>
 </section>
 
-<section class="main-text-area ">
+<section class="main-text-area animated bounceInUp">
   <div class="container">
     <div class="row">
     <h1 class="mini-h1">Персональный гороскоп отношений.</h1>
@@ -95,7 +96,7 @@
     <div class="row">
 
       <div class="col-md-8 col-md-offset-2">
-         <h3 class="helper-form-header">Чтобы увидеть свой гороскоп отношений, заполните форму.</h3>
+         <h3 class="helper-form-header wow bounce">Чтобы увидеть свой гороскоп отношений, заполните форму.</h3>
      
 
 <form name="USER" class="form-horizontal">
@@ -132,7 +133,7 @@
   <label class="col-sm-3 control-label birth-time">Время рождения: </label>  
     <div class="col-sm-9">
       <div class="radio div-birth-sex">
-        <label id="time-label-true" class="radio-inline" >
+        <label id="time-label-true" class="radio-inline"">
           <input  type="radio" id="time-true" name="time" value="true">Точное время
         </label>
         <input type="text" name="exact-time" class="form-control exact-time " disabled placeholder='Время в формате "чч.мм"'>
@@ -141,7 +142,7 @@
 
     <div class="col-sm-9 col-sm-offset-3">
       <div class="radio div-birth-sex">
-        <label id="time-label-false" class="radio-inline" >
+        <label id="time-label-false" class="radio-inline"" >
           <input  type="radio" id="time-false" name="time" value="false">Не знаю, около 
         </label>
         <input type="text" name="midle-time" class="form-control exact-time " disabled placeholder='Время в формате "чч.мм"'>
@@ -257,6 +258,14 @@
   <script src='js/model.js'></script>
 
 
+
+<script src="js/wow.js"></script>
+              <script>
+              new WOW().init();
+              </script>
+
+
+
   <script type="text/javascript">
 
 //form submiting and validation
@@ -280,10 +289,11 @@ function ActiveButton (){  // function for activating of the btn
     enable_btn = true;
     if (HeaderFromThis === 1){
       FormHeader.innerText = 'Загружены данные последней сессии.';
-      FormHeader.style.color= '#77FF94';}
+      FormHeader.style.textShadow = '0 0 .7em white';
+    }
     if (HeaderFromThis === 2){
       FormHeader.innerText = 'Данные внесены успешно.';
-      FormHeader.style.color= '#77FF94';
+      FormHeader.style.textShadow = '0 0 .7em white';
     }
 
   }
@@ -292,7 +302,7 @@ function ActiveButton (){  // function for activating of the btn
     SentBtn.style.cursor = '';
     enable_btn = false;
     FormHeader.innerText = 'Чтобы увидеть свой гороскоп отношений, заполните форму.';
-    FormHeader.style.color= '#fff';
+    FormHeader.style.textShadow = '';
     HeaderFromThis = 2;
   }
 }
@@ -323,13 +333,17 @@ NameField.onblur=NameValid;
 function NameValid(){
   var Check_name = /\S+/;
   if (Check_name.test(NameField.value)){
-    NameField.style.backgroundColor = '#77FF94';
-    BName.style.color = '#77FF94';
+    NameField.style.backgroundColor = 'transparent';
+    NameField.style.color = '#fff';
+    NameField.style.boxShadow = '0 0 .7em white';
+    BName.style.textShadow = '0 0 .7em white';
     name_val = true;
   }
   else{
     NameField.style.backgroundColor = 'white';
-    BName.style.color = 'white';
+    NameField.style.color = '#303753';
+    NameField.style.boxShadow = '';
+    BName.style.textShadow = '';
     name_val = false;   
   }
   ActiveButton();
@@ -351,18 +365,20 @@ function SexValid(){
 
 if (SexRadio.value == 'М'){
   label_sex_m.style.opacity = 1;
-  label_sex_fem.style.opacity = 0.17;  
-  label_sex_m.style.color = '#77FF94';
+  label_sex_fem.style.opacity = 0.333;  
+  label_sex_m.style.textShadow = '0 0 .7em white';
+  label_sex_m.style.color = 'white';
   label_sex_fem.style.color = 'white';
-  BSex.style.color = '#77FF94';
+  BSex.style.textShadow = '0 0 .7em white';
   sex_val = true;
 }
 if (SexRadio.value == 'Ж'){
-  label_sex_m.style.opacity = 0.17;
+  label_sex_m.style.opacity = 0.33;
   label_sex_fem.style.opacity = 1; 
-  label_sex_fem.style.color = '#77FF94';
+  label_sex_fem.style.textShadow = '0 0 .7em white';
   label_sex_m.style.color = 'white';
-  BSex.style.color = '#77FF94';
+  label_sex_fem.style.color = 'white';
+  BSex.style.textShadow = '0 0 .7em white';
   sex_val = true;
 }
 ActiveButton();
@@ -381,19 +397,25 @@ function DateValid(){
     //==========SOME EXTRA CODE should be here about special month 
     var Check_date_arr = DateField.value.split('.');
     if((Number(Check_date_arr[0]) <= 31) && (Number(Check_date_arr[1]) <= 12) && (Number(Check_date_arr[2]) > 1961) && ( Number(Check_date_arr[2]) < 2002)){
-      DateField.style.backgroundColor = '#77FF94';
-      BDate.style.color = '#77FF94';
+      DateField.style.backgroundColor = 'transparent';
+      DateField.style.color = '#fff';
+      DateField.style.boxShadow = '0 0 .7em white';
+      BDate.style.textShadow = '0 0 .7em white';
       date_val = true;
     }
     else{
       DateField.style.backgroundColor = 'white';
-      BDate.style.color = 'white';
+      DateField.style.color = '#303753';
+      DateField.style.boxShadow = '';
+      BDate.style.textShadow = '';
       date_val = false;
     }
   }
   else{
-     DateField.style.backgroundColor = 'white';
-     BDate.style.color = 'white';
+      DateField.style.backgroundColor = 'white';
+      DateField.style.color = '#303753';
+      DateField.style.boxShadow = '';
+      BDate.style.textShadow = '';
      date_val = false;
   }
   ActiveButton();
@@ -431,6 +453,9 @@ function TimeAnswer(){
       TimeLabelFalse.style.opacity = 0.25;
       ExactTimeField.style.backgroundColor = 'rgba(255,255,255,1)';
       MidleTimeField.style.backgroundColor = 'rgba(255,255,255,0.1)';
+      ExactTimeField.style.boxShadow = '';
+      ExactTimeField.style.color = '#303753';
+      BTime.style.textShadow = '';
     }
     if (TimeRadio.value == 'false'){
       ModelH.exact_time = 'false';
@@ -441,6 +466,9 @@ function TimeAnswer(){
       TimeLabelFalse.style.opacity = 1;
       ExactTimeField.style.backgroundColor = 'rgba(255,255,255,0.1)';
       MidleTimeField.style.backgroundColor = 'rgba(255,255,255,1)';
+      MidleTimeField.style.boxShadow = '';
+      MidleTimeField.style.color = '#303753';
+      BTime.style.textShadow = '';
     } 
     ActiveButton(); 
 }
@@ -450,18 +478,28 @@ function ETimeValid(){
     if (Check_time.test(ExactTimeField.value)){
        var Check_time_arr = ExactTimeField.value.split('.');
        if((Number(Check_time_arr[0]) <=23) && (Number(Check_time_arr[1]) <=59)){
-        ExactTimeField.style.backgroundColor = '#77FF94';
-        TimeLabelTrue.style.color = '#77FF94';
-        BTime.style.color = '#77FF94';
+        ExactTimeField.style.boxShadow = '0 0 .7em white';
+        ExactTimeField.style.backgroundColor = 'transparent';
+        ExactTimeField.style.color = '#fff';
+        TimeLabelTrue.style.textShadow = '0 0 .7em white';
+        BTime.style.textShadow = '0 0 .7em white';
         time_val = true;
        }
        else{
-        ExactTimeField.style.backgroundColor = 'white';
+        ExactTimeField.style.boxShadow = '';
+        ExactTimeField.style.backgroundColor = '#fff';
+        ExactTimeField.style.color = '#303753';
+        TimeLabelTrue.style.textShadow = '';
+        BTime.style.textShadow = '';
         time_val = false;       
        }
     }
      else{
-      ExactTimeField.style.backgroundColor = 'white';  
+        ExactTimeField.style.boxShadow = '';
+        ExactTimeField.style.backgroundColor = '#fff';
+        ExactTimeField.style.color = '#303753';
+        TimeLabelTrue.style.textShadow = '';
+        BTime.style.textShadow = '';
       time_val = false;      
      }
      ActiveButton();
@@ -472,19 +510,29 @@ function MTimeValid(){
     if (Check_time.test(MidleTimeField.value)){
        var Check_time_arr = MidleTimeField.value.split('.');
        if((Number(Check_time_arr[0]) <=23) && (Number(Check_time_arr[1]) <=59)){
-        MidleTimeField.style.backgroundColor = '#77FF94';
-        TimeLabelFalse.style.color = '#77FF94';
-        BTime.style.color = '#77FF94';
+        MidleTimeField.style.boxShadow = '0 0 .7em white';
+        MidleTimeField.style.backgroundColor = 'transparent';
+        MidleTimeField.style.color = '#fff';
+        TimeLabelFalse.style.textShadow = '0 0 .7em white';
+        BTime.style.textShadow = '0 0 .7em white';
         time_val = true;
        }
        else{
-        MidleTimeField.style.backgroundColor = 'white';  
+        MidleTimeField.style.boxShadow = '';
+        MidleTimeField.style.backgroundColor = 'transparent';
+        MidleTimeField.style.color = '#303753';
+        TimeLabelFalse.style.textShadow = '';
+        BTime.style.textShadow = ''; 
         time_val = false;      
        }
     }
      else{
-      MidleTimeField.style.backgroundColor = 'white'; 
-      time_val = false;       
+        MidleTimeField.style.boxShadow = '';
+        MidleTimeField.style.backgroundColor = 'transparent';
+        MidleTimeField.style.color = '#303753';
+        TimeLabelFalse.style.textShadow = '';
+        BTime.style.textShadow = ''; 
+        time_val = false;       
      }
      ActiveButton();
 }
@@ -504,7 +552,9 @@ var bel_cities = [{city:"Минск", value:"Минск"}, {city:"Брест", v
 
 function CountryValid(){
   if (CountrySelect.value != ""){
-    CountrySelect.style.backgroundColor = '#77FF94';
+    CountrySelect.style.backgroundColor = 'transparent';
+    CountrySelect.style.color = '#fff';
+    CountrySelect.style.boxShadow = '0 0 .7em white';
     country_val = true;
   }
   if (CountrySelect.value == "Беларусь"){
@@ -524,8 +574,10 @@ function CountryValid(){
 
 function CityValid(){
   if (CitySelect.value != ""){
-    CitySelect.style.backgroundColor = '#77FF94';
-    BPlace.style.color = '#77FF94';
+    CitySelect.style.backgroundColor = 'transparent';
+    CitySelect.style.boxShadow = '0 0 .7em white';
+    CitySelect.style.color = '#fff';
+    BPlace.style.textShadow = '0 0 .7em white';
     city_val = true;
   }
   ActiveButton();
