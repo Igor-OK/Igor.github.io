@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>WEB-VR POSITION</title>
+	<script src="https://aframe.io/releases/0.3.0/aframe.min.js"> </script>	
+</head>
+<body>
+	<a-scene>
+		<a-box color="green" depth="2" width="2" height="2" position="-8 -8 0" scale="1 1 1" ></a-box>
+		<a-box color="red" depth="2" width="2" height="2" position="8 -8 0" scale="2 1 1" src=#video" ></a-box>
+		<a-assets>
+			<video src="back.mp4" id="video"></video>
+		</a-assets>
+		<a-sphere color="green" radius="2" position="-8 0 -8" scale="1 1 1"  src="#video" ></a-sphere>
+		<a-sphere color="yellow" radius="2" position="0 0 -8" scale="1 1 1"  src="#video" ></a-sphere> ></a-box>
+		<a-sky src="sea.png"></a-sky>
+	</a-scene>
+</body>
+</html>
