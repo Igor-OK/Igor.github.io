@@ -8,13 +8,14 @@
 <body>
 	<a-scene>
 		<a-box color="green" depth="2" width="2" height="2" position="-8 -8 0" scale="1 1 1" ></a-box>
-		<a-box color="red" depth="2" width="2" height="2" position="8 -8 0" scale="2 1 1" src=#video" ></a-box>
+		<a-box color="red" depth="2" width="2" height="2" position="8 -8 0" scale="2 1 1" src="#video" ></a-box>
 		<a-assets>
 			<video src="back.mp4" id="video"></video>
+			<video src="clans.mp4" id="video-sky"></video>
 		</a-assets>
 		<a-sphere color="green" radius="2" position="-8 0 -8" scale="1 1 1"  src="#video" ></a-sphere>
 		<a-sphere color="yellow" radius="2" position="0 0 -8" scale="1 1 1"  src="#video" ></a-sphere> ></a-box>
-		<a-sky src="sea.png"></a-sky>
+		<a-sky src="#video-sky"></a-sky>
 	</a-scene>
 </body>
 </html>
