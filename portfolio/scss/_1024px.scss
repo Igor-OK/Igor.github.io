@@ -1,0 +1,158 @@
+@media (max-width: 1024px) { /*===== 1024 =====================================*/
+
+  main{
+    width:704px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  /*===== header section ====*/
+  .grid-header{
+    height: 1024px;
+    grid-template-rows: 97px 88px 39px 384px 75px auto;
+    grid-template-columns: 1fr 768px 1fr;
+    grid-template-areas: ". . ."
+                         ". hgroup ."
+                         ". . ."
+                         ". dev ."
+                         ". . ."
+                         ". intro .";
+    text-align: center;
+  }
+  .dev-header{
+    margin-top: 0;
+  }
+  @keyframes heartbeat {
+    to { transform: scale(0.85); }
+  }
+  .dev-inner{
+    width:384px;
+    background-image: url(../assets/dev-768.jpg);
+    border-radius: 50%;
+    background-position: center;
+    margin: auto;
+    animation: heartbeat 1.55s infinite alternate;
+  }
+  .introduction .lo-res{
+    display: inline-block;
+    font-size: 20px;
+    width: 544px;
+  }
+  .introduction .hi-res{
+    display: none;
+  }
+
+
+
+/*=== portfolio section ===*/
+
+  .grid-portfolio article{
+    height: 675px;
+
+    .text{
+      display:block;
+
+      p{
+      margin-top: 0;
+      }
+    }
+  }
+  .grid-portfolio article:nth-child(even),
+  .grid-portfolio article:nth-child(odd){
+    grid-template-rows: 147px 528px;
+    grid-template-columns: 304px 16px 384px;
+    grid-template-areas: "p-head . p-text"
+                         "p-slider p-slider p-slider";
+  }
+  .grid-portfolio article:nth-child(odd){
+    margin-top: 70px;
+    margin-bottom: 70px;
+  }
+
+
+
+  /*===== footer section ====*/
+
+  .grid-footer{
+
+    margin-top: 80px;
+    height: 819px;
+    grid-template-rows: 33px 48px 21px 147px 19px auto;
+    grid-template-columns: 1fr 384px 96px 224px 1fr;
+    grid-template-areas: ". . . . . "
+                         ". fh1  fh1 fh1 ."
+                         ". . . . . "
+                         ". inv . soc ."
+                         ". . . . ."
+                         ". frm frm frm . ";
+    
+    h1{
+      margin-top: 0;
+    }
+    .social{
+      padding-top: 0;
+
+      p{
+        margin-top: 0;
+      }
+      p:first-child {
+        display: none;
+      }
+    }
+  }
+
+
+
+/*===     SLIDERS    ======*/
+
+  .wrapper{
+    height: 384px;
+    margin: 0 auto 0;
+    width: 704px;
+  }
+
+  .wrapper.left-side,
+  .wrapper.right-side {
+    grid-template-rows: 496px 24px 8px;
+    grid-template-areas: "sli" "." "con";
+  }
+
+  .slider {
+    height: 496px;
+    width: 704px;
+  }
+
+  .slide1 { background-image: url(../assets/704x496/5el1-min.jpg); }
+  .slide2 { background-image: url(../assets/704x496/5el2-min.jpg); }
+  .slide3 { background-image: url(../assets/704x496/5el3-min.jpg); }
+  .slide4 { background-image: url(../assets/704x496/5el4-min.jpg); }
+
+  .slide5 { background-image: url(../assets/704x496/astro1-min.jpg); }
+  .slide6 { background-image: url(../assets/704x496/astro2-min.jpg); }
+  .slide7 { background-image: url(../assets/704x496/astro3-min.jpg); }
+  .slide8 { background-image: url(../assets/704x496/astro4-min.jpg); }
+
+  .slide9 { background-image: url(../assets/704x496/gar1-min.jpg); }
+  .slide10 { background-image: url(../assets/704x496/gar2-min.jpg); }
+  .slide11 { background-image: url(../assets/704x496/gar3-min.jpg); }
+
+  .slide12 { background-image: url(../assets/704x496/mc1-min.jpg); }
+  .slide13 { background-image: url(../assets/704x496/mc2-min.jpg); }
+  .slide14 { background-image: url(../assets/704x496/mc3-min.jpg); }
+
+  .slide15 { background-image: url(../assets/704x496/kar1-min.jpg); }
+  .slide16 { background-image: url(../assets/704x496/kar2-min.jpg); }
+  .slide17 { background-image: url(../assets/704x496/kar3-min.jpg); }
+
+
+  .wrapper .controls {
+    margin-top:-8px;
+    padding-top:0;
+    padding-left: 300px;
+    height: 8px;
+  }
+  .wrapper label {
+    margin: 0 24px 0 0;
+  }
+
+}
